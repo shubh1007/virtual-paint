@@ -116,7 +116,7 @@ while True:
     
     img[570: 720, 0:1280] = header
     key = 0xFF
-    if key == 27:
+    if cv.waitKey(10) & key == 27:
         break
     cv.imshow("Video", img)
     cv.waitKey(1)

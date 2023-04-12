@@ -5,13 +5,13 @@ import time
 class handDetector():
     def __init__(self, mode = False, maxhands = 2, modelComplexity = 1, detectCon = 0.5, trackCon = 0.5):
         '''
-        Mode: False, Detect and Track if confidence is high True, 
-        Detect and Track even with low confidence 
+        Mode: 
+            False, Detect and Track if confidence is high 
+            True,  Detect and Track even with low confidence 
         maxhands = 2
         minimum detection confidence = 0.5
         minimum tracking confidence = 0.5
         '''
-
         self.mode = mode
         self.maxhands = maxhands
         self.detectCon = detectCon
