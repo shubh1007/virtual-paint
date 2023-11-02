@@ -99,13 +99,13 @@ while True:
                 if xp == 0 and yp == 0:
                     xp, yp = indexX, indexY
                 #else:
-                    #xp, yp = indexX, indexY
+                #xp, yp=indexX, indexY
                 if draw:
                     cv.circle(img, (indexX, indexY), 15, (0, 255, 255), cv.FILLED)    
                     cv.line(img, (xp, yp), (indexX, indexY), drawColor, brushThickness)
                     cv.line(canvas, (xp, yp), (indexX, indexY), drawColor, brushThickness)
                     xp, yp = indexX, indexY
-
+            xp, yp = indexX, indexY
 
     gray = cv.cvtColor(canvas, cv.COLOR_BGR2GRAY)
     _, imgInverse = cv.threshold(gray, 0, 255, cv.THRESH_BINARY_INV)
